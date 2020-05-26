@@ -6,5 +6,5 @@
 }
 
 .TestUpperCamelize {
-  content: assert.assert-equal(functions.lower-camelize('my-class-name'), 'MyClassName');
+  content: assert.assert-equal(functions.upper-camelize('my-class-name'), 'MyClassName');
 }
