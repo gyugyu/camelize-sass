@@ -1,0 +1,10 @@
+@use '@gyugyu/assert-sass' as assert;
+@use 'functions';
+
+.TestLowerCamelize {
+  content: assert.assert-equal(functions.lower-camelize('my-function-name'), 'myFunctionName');
+}
+
+.TestUpperCamelize {
+  content: assert.assert-equal(functions.lower-camelize('my-class-name'), 'MyClassName');
+}

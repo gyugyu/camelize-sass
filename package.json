@@ -1,0 +1,14 @@
+{
+  "name": "@gyugyu/camelize-sass",
+  "version": "0.1.0",
+  "description": "Camel-case string transformation functions for Dart Sass",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "Yusuke Yagyu <gyugyu@pepabo.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "sass": "^1.26.5"
+  }
+}

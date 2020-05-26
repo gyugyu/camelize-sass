@@ -1,0 +1,38 @@
+@use 'sass:list';
+@use 'sass:string';
+
+@function capitalize($string) {
+  @return string.to-upper-case(string.slice($string, 1, 1)) + string.slice($string, 2);
+}
+
+@function uncapitalize($string) {
+  @return string.to-lower-case(str-slice($string, 1, 1)) + string.slice($string, 2);
+}
+
+@function camelize($string) {
+  $progress: $string;
+  $result: '';
+  $exclude: ' ', '-', '–', '—', '_', ',', ';', ':', '.';
+  
+  @while string.length($progress) > 0  {
+    $char: string.slice($progress, 1, 1);
+
+    @if list.index($exclude, $char) != null {
+      $progress: capitalize(string.slice($progress, 2, 2)) + string.slice($progress, 3);
+    }
+    @else {
+      $result: $result + $char;
+      $progress: string.slice($progress, 2);
+    }
+  }
+  
+  @return $result;
+}
+
+@function upper-camelize($string) {
+  @return capitalize(camelize($string));
+}
+
+@function lower-camelize($string) {
+  @return uncapitalize(camelize($string));
+}
