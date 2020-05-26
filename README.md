@@ -1,2 +1,2 @@
 # camelize-sass
-Camel-case transformation functions for Dart Sass
+Camel-case string transformation functions for Dart Sass
