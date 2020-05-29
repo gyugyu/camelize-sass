@@ -3,12 +3,23 @@
   "version": "0.1.0",
   "description": "Camel-case string transformation functions for Dart Sass",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "sassunit -I node_modules"
   },
   "keywords": [],
   "author": "Yusuke Yagyu <gyugyu@pepabo.com>",
   "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/gyugyu/camelize-sass.git"
+  },
+  "bugs": {
+    "url": "https://github.com/gyugyu/camelize-sass/issues"
+  },
+  "homepage": "https://github.com/gyugyu/camelize-sass#readme",
   "devDependencies": {
+    "sass": "^1.26.5"
+  },
+  "peerDependencies": {
     "sass": "^1.26.5"
   }
 }
